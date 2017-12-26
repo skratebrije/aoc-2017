@@ -5,7 +5,7 @@
 #include <unistd.h>
 using namespace std;
 
-vector< vector<int> > read_input() {
+vector< vector<int> > read_input_day2() {
 	vector< vector<int> > input;
 	ifstream file("src/day2input.txt");
 	if (file.is_open()) {
@@ -48,7 +48,7 @@ int get_divisible_checksum(vector< vector <int> > input) {
 }
 
 void day2() {
-	vector< vector <int> > input = read_input();
+	vector< vector <int> > input = read_input_day2();
 	//cout << get_checksum(input);
 	cout << get_divisible_checksum(input);
 }
