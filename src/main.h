@@ -9,5 +9,6 @@ int day5();
 int day6();
 int day7();
 int day8();
+int day9();
 
 #endif /* SRC_MAIN_H_ */
