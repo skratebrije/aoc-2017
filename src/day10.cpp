@@ -8,7 +8,6 @@ using namespace std;
 
 vector<int> lengths = {18,1,0,161,255,137,254,252,14,95,165,33,181,168,2,188};
 string input = "18,1,0,161,255,137,254,252,14,95,165,33,181,168,2,188";
-vector<int> add_lengths = {17,31,73,47,23};
 
 void initialize_vals(vector<int> *v) {
 	for (int i=0; i<256; i++) {
@@ -16,13 +15,16 @@ void initialize_vals(vector<int> *v) {
 	}
 }
 
-void transform_lengths(vector<int> *l) {
+vector<int> transform_lengths(string input) {
+	vector<int> add_lengths = {17,31,73,47,23};
+	vector<int> l;
 	for (char c : input) {
-		l->push_back(c);
+		l.push_back(c);
 	}
 	for (int i : add_lengths) {
-		l->push_back(i);
+		l.push_back(i);
 	}
+	return l;
 }
 
 void swap(vector<int> *v, int start, int length) {
@@ -49,16 +51,14 @@ int compute_hash() {
 	return vals[0]*vals[1];
 }
 
-vector<int> sparse_hash() {
+vector<int> sparse_hash(vector<int> lengths) {
 	int pos = 0;
 	int skip = 0;
 	vector<int> vals;
-	vector<int> ascii_lengths;
 	initialize_vals(&vals);
-	transform_lengths(&ascii_lengths);
 
 	for (int i=0; i<64; i++) {
-		for (int length: ascii_lengths) {
+		for (int length: lengths) {
 			swap(&vals, pos, length);
 			pos = (pos+length+skip) % vals.size();
 			skip++;
@@ -93,5 +93,5 @@ string knot_hash(vector<int> vals) {
 
 void day10() {
 	//cout << compute_hash();
-	cout << knot_hash(dense_hash(sparse_hash()));
+	cout << knot_hash(dense_hash(sparse_hash(transform_lengths(input))));
 }
