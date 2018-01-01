@@ -18,5 +18,6 @@ int day14();
 int day15();
 int day16();
 int day17();
+int day18();
 
 #endif /* SRC_MAIN_H_ */
