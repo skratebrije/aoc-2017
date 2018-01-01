@@ -50,7 +50,7 @@ void update_sets(map<int, int> *m, vector<set <int> > *v, set<int> *group) {
 int read_input_day12(bool total_groups) {
 	map<int, int> m;
 	vector<set <int> > v;
-	ifstream file("src/day12input.txt");
+	ifstream file("input/day12input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {

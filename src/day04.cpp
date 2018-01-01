@@ -23,7 +23,7 @@ int unique_passphrases(bool check_anagrams) {
 	int count = 0;
 	set<string> input;
 	bool all_unique = true;
-	ifstream file("src/day4input.txt");
+	ifstream file("input/day04input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {

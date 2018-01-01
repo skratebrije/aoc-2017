@@ -7,7 +7,7 @@ using namespace std;
 
 vector< vector<int> > read_input_day2() {
 	vector< vector<int> > input;
-	ifstream file("src/day2input.txt");
+	ifstream file("input/day02input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {

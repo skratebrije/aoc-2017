@@ -50,7 +50,7 @@ int reduce(map<string, int> m) {
 }
 
 int read_input_day11(map<string, int> *m, bool find_farthest) {
-	ifstream file("src/day11input.txt");
+	ifstream file("input/day11input.txt");
 	int farthest = 0;
 	if (file.is_open()) {
 		string line;

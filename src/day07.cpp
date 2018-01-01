@@ -6,7 +6,7 @@
 using namespace std;
 
 void read_input_day7(map<string, string> *m, map<string, pair<int, vector<string> > > *mr) {
-	ifstream file("src/day7input.txt");
+	ifstream file("input/day07input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {

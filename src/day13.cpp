@@ -8,7 +8,7 @@ using namespace std;
 int read_input_day13(map<int, tuple<int, int, int> > *m) {
 	//tuple contains <position, range, delta>
 	int max_depth = 0;
-	ifstream file("src/day13input.txt");
+	ifstream file("input/day13input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {

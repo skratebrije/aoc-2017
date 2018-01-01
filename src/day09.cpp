@@ -3,7 +3,7 @@
 using namespace std;
 
 int parse(bool count_garbage) {
-	ifstream file("src/day9input.txt");
+	ifstream file("src/day09input.txt");
 	char ch;
 	int num_open_parens = 0;
 	bool in_garbage = false;

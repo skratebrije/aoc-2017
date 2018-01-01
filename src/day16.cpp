@@ -52,7 +52,7 @@ string perform_once() {
 	initialize(&v);
 	cout << "starting vector: " << string(v.begin(),v.end()) << endl;
 
-	ifstream file("src/day16input.txt");
+	ifstream file("input/day16input.txt");
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {
@@ -74,7 +74,7 @@ string perform_many(long times) {
 
 	long i;
 	for (i=0; i<times; i++) {
-		ifstream file("src/day16input.txt");
+		ifstream file("input/day16input.txt");
 		if (file.is_open()) {
 			string line;
 			while (getline(file, line)) {

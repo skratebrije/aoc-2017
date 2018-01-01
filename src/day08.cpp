@@ -25,7 +25,7 @@ enum parser_state {
 };
 
 void get_input_day8(vector<instruction> *instructions) {
-	ifstream file("src/day8input.txt");
+	ifstream file("input/day08input.txt");
 
 	if (file.is_open()) {
 		string line;
