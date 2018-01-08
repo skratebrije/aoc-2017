@@ -6,8 +6,8 @@
 #include <vector>
 using namespace std;
 
-void get_input_day18(vector< vector<string> > *v) {
-	ifstream file("input/day18input.txt");
+void get_input_instructions(vector< vector<string> > *v, string filepath) {
+	ifstream file(filepath);
 	if (file.is_open()) {
 		string line;
 		while (getline(file, line)) {
@@ -139,7 +139,7 @@ int perform_pair_instructions(vector< vector<string> > *v) {
 
 void day18() {
 	vector< vector<string> > v;
-	get_input_day18(&v);
+	get_input_instructions(&v, "input/day18input.txt");
 	//cout << perform_sound_instructions(&v);
 	cout << perform_pair_instructions(&v);
 }
