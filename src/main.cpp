@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-	day23();
+	day24();
 	return 0;
 }

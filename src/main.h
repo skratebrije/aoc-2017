@@ -24,5 +24,6 @@ int day20();
 int day21();
 int day22();
 int day23();
+int day24();
 
 #endif /* SRC_MAIN_H_ */
